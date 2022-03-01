@@ -1,0 +1,615 @@
+// Colors
+
+$bgcolor: #6c7c9e;
+$footercolor: #c4cad8;
+$fontcolor-light: #fcfcff;
+$fontcolor-dark: #1d2027;
+$bgcol--catalogue: #6c7c9e;
+$bgcol--aboutus: #3f3b54;
+
+// fonts and weights
+
+$popppins: "Poppins", sans-serif;
+$weight-font-head: 600;
+$weight-font-subhead: 400;
+$weight-font-itemname: 500;
+$weight-font-itemprice: 300;
+
+// font sizes
+
+$size-font-head: 30px;
+$size-font-subhead: 18px;
+
+// top
+
+// .body::-webkit-scrollbar {
+//   display: none;
+// }
+
+// scroll style
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkgray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+.hamburger {
+  opacity: 0;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 32px 16px;
+
+  &__logo--img {
+    justify-self: center;
+  }
+
+  &__button--cart {
+    justify-self: right;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+}
+
+// hero
+
+.hero {
+  &__frame {
+    &--img {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+// navigation links
+
+.nav-links {
+  font-family: $popppins;
+  font-weight: $weight-font-head;
+  justify-content: center;
+}
+
+// body
+
+body {
+  background-color: $bgcolor;
+  margin: 0px;
+  overflow-y: overlay;
+
+  // body catalogue
+
+  .catalogue {
+    background-color: $bgcol--catalogue;
+
+    // padding: 0px;
+    margin: 16px;
+
+    // catalogue heading text
+
+    &__text {
+      margin: 32px 0px;
+
+      &--heading {
+        margin: 0;
+        font-size: $size-font-head;
+
+        font-family: $popppins;
+        font-weight: $weight-font-head;
+        color: $fontcolor-light;
+      }
+
+      &--sub {
+        margin: 0;
+        font-family: $popppins;
+        font-weight: $weight-font-subhead;
+        font-size: $size-font-subhead;
+        color: $fontcolor-light;
+      }
+    }
+
+    // catalogue item container
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0%;
+      max-width: 470px;
+      margin-left: auto;
+      margin-right: auto;
+
+      justify-content: flex-start;
+      align-items: center;
+
+      column-gap: 10px;
+      padding-bottom: 30px;
+
+      // padding: 16px;
+      // margin: 0;
+
+      // catalogue item
+
+      &__item {
+        cursor: pointer;
+
+        background-color: #ffffff;
+        width: 150px;
+        height: 240px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+
+        &--img {
+          border-radius: 4px 4px 0 0;
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+        }
+
+        // catalogue item text
+
+        &__text {
+          padding: 2px 12px;
+
+          &--name {
+            margin: 4px 0;
+            color: $fontcolor-dark;
+            font-family: $popppins;
+            font-weight: $weight-font-itemname;
+          }
+
+          &--price {
+            margin: 4px 0;
+            color: $fontcolor-dark;
+            font-family: $popppins;
+            font-weight: $weight-font-itemprice;
+          }
+        }
+      }
+    }
+  }
+
+  // about us
+
+  .aboutus {
+    // about us frame
+    margin: 0 auto;
+
+    &__frame {
+      background-color: $bgcol--aboutus;
+      margin: 0px auto;
+      max-height: 30%;
+      display: flex;
+      justify-content: center;
+
+      &--img {
+        width: 70%;
+        max-height: 250px;
+        object-fit: cover;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      // about us text
+
+      &__text {
+        padding: 30px;
+
+        &--heading {
+          margin: 0;
+          font-size: 18px;
+
+          font-family: $popppins;
+          font-weight: $weight-font-head;
+          color: $fontcolor-light;
+        }
+
+        &--sub {
+          margin: 0;
+          font-family: $popppins;
+          font-weight: $weight-font-subhead;
+          font-size: 14px;
+          color: $fontcolor-light;
+        }
+      }
+    }
+  }
+}
+
+// footer
+
+.footer-div {
+  background-color: $footercolor;
+
+  padding: 25px;
+  column-gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+// checkout modal
+
+.checkoutmodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+
+  height: 100%;
+  width: 100%;
+  // overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  // form
+
+  form {
+    font-family: $popppins;
+    font-size: 16px;
+    display: grid;
+    // padding: 0.5em;
+    // background: #f9f9f9;
+    // border: 1px solid #c1c1c1;
+    margin: auto;
+    max-width: 500px;
+    padding: 1em;
+    grid-gap: 6px;
+  }
+
+  form input {
+    background: #fff;
+    border: 1px solid #9c9c9c;
+    z-index: 2;
+  }
+
+  form button {
+    background: lightgrey;
+    padding: 0.7em;
+    width: 100%;
+    border: 0;
+    font-family: $popppins;
+    margin-top: 16px;
+  }
+  form button:hover {
+    background: $bgcol--aboutus;
+    cursor: pointer;
+  }
+
+  label {
+    // padding: 0.5em 0.5em 0.5em 0;
+    align-self: center;
+    max-width: 160px;
+  }
+
+  // input[type="radio"] {
+  //   -webkit-appearance: radio;
+  //   color: #0a0a0a;
+  // }
+
+  input {
+    align-self: center;
+    padding: 0.25em;
+    height: 100%;
+    max-height: 100px;
+    // margin-bottom: 0.5rem;
+    margin: 0;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  @media (min-width: 650px) {
+    form {
+      grid-template-columns: 140px 1fr;
+      grid-gap: 16px;
+    }
+
+    label {
+      text-align: left;
+      grid-column: 1/2;
+    }
+
+    input,
+    button {
+      grid-column: 2 / 3;
+    }
+  }
+
+  .paymethod {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    // margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+  .paymethod input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    // padding: 5px 0 5px 0;
+    height: 20px;
+    width: 20px;
+    align-self: center;
+
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .paymethod:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .paymethod input:checked ~ .checkmark {
+    background-color: $bgcol--catalogue;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .paymethod:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .paymethod input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .paymethod .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+}
+
+// cart modal
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+
+  height: 100%;
+  width: 100%;
+  // overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalcontent {
+  background-color: #f2f2f2;
+  margin: 5% auto;
+
+  padding: 25px;
+  max-width: 350px;
+  border-radius: 3px;
+  animation-name: modalcartopen__anim;
+  animation-duration: 0.25s;
+}
+
+.cartmodal {
+  &__text {
+    font-family: $popppins;
+    margin: 10px 0;
+  }
+
+  &--closebtn {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+  &--closebtn:hover,
+  &--closebtn:focus {
+    text-decoration: none;
+    cursor: pointer;
+    color: #0a0a0a;
+  }
+
+  &__container__itemframe {
+    // display: block;
+    // flex-wrap: wrap;
+
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+
+      margin: 10px;
+
+      &--img {
+        width: 80px;
+        height: 80px;
+      }
+
+      &__textframe {
+        flex-wrap: wrap;
+        padding: 0 10px;
+
+        &--titletext {
+          font-family: $popppins;
+          margin: 4px;
+          height: 25px;
+          font-size: 1.1em;
+        }
+
+        &--price {
+          font-family: $popppins;
+          margin: 4px;
+          height: 25px;
+          font-size: 0.9em;
+        }
+      }
+    }
+
+    &--button {
+      border: none;
+      color: $fontcolor-light;
+      background-color: $bgcol--aboutus;
+
+      padding: 10px 28px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: $popppins;
+      margin: 10px, auto;
+      justify-self: center;
+      cursor: pointer;
+    }
+  }
+}
+
+// modal animations
+
+@keyframes modalcartopen__anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+//
+
+//
+
+//
+
+// breakpoints
+
+@media (min-width: 650px) {
+  .modalcontent {
+    max-width: 550px;
+    // padding-left: 10%;
+    // padding-right: 10%;
+    // margin-left: auto;
+    // margin-right: auto;
+  }
+
+  body {
+    .catalogue {
+      padding-left: 10%;
+      padding-right: 10%;
+      max-width: 790px;
+      margin-left: auto;
+      margin-right: auto;
+
+      &__container {
+        max-width: 100%;
+        &__item {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .top {
+      padding-left: 10%;
+      padding-right: 10%;
+      margin: 32px auto;
+      max-width: 790px;
+    }
+
+    .hero {
+      margin: 16px auto;
+      padding-left: 10%;
+      padding-right: 10%;
+
+      max-height: 700px;
+      object-fit: cover;
+      max-width: 790px;
+    }
+
+    .aboutus {
+      padding-left: 10%;
+      padding-right: 10%;
+      // max-width: 790px;
+
+      &__frame {
+        max-width: 790px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &__frame--img {
+        width: 100%;
+        max-width: 400px;
+        max-height: 300px;
+        object-fit: cover;
+      }
+
+      &__frame__text {
+        &--heading {
+          font-size: 18px;
+        }
+        &--sub {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 501px) {
+  .body {
+    .catalogue__container {
+      max-width: 325px;
+      margin-left: auto;
+      margin-right: auto;
+      column-gap: 15px;
+      row-gap: 15px;
+
+      .catalogue__container__item {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}

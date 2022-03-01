@@ -1,0 +1,540 @@
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 10px grey;
+          box-shadow: inset 0 0 10px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkgray;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: grey;
+}
+
+.hamburger {
+  opacity: 0;
+}
+
+.top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 32px 16px;
+}
+
+.top__logo--img {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.top__button--cart {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hero__frame--img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-links {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  background-color: #6c7c9e;
+  margin: 0px;
+  overflow-y: overlay;
+}
+
+body .catalogue {
+  background-color: #6c7c9e;
+  margin: 16px;
+}
+
+body .catalogue__text {
+  margin: 32px 0px;
+}
+
+body .catalogue__text--heading {
+  margin: 0;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fcfcff;
+}
+
+body .catalogue__text--sub {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fcfcff;
+}
+
+body .catalogue__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0%;
+  max-width: 470px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  padding-bottom: 30px;
+}
+
+body .catalogue__container__item {
+  cursor: pointer;
+  background-color: #ffffff;
+  width: 150px;
+  height: 240px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+body .catalogue__container__item--img {
+  border-radius: 4px 4px 0 0;
+  width: 100%;
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .catalogue__container__item__text {
+  padding: 2px 12px;
+}
+
+body .catalogue__container__item__text--name {
+  margin: 4px 0;
+  color: #1d2027;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+body .catalogue__container__item__text--price {
+  margin: 4px 0;
+  color: #1d2027;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+
+body .aboutus {
+  margin: 0 auto;
+}
+
+body .aboutus__frame {
+  background-color: #3f3b54;
+  margin: 0px auto;
+  max-height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .aboutus__frame--img {
+  width: 70%;
+  max-height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0px;
+  padding: 0px;
+}
+
+body .aboutus__frame__text {
+  padding: 30px;
+}
+
+body .aboutus__frame__text--heading {
+  margin: 0;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #fcfcff;
+}
+
+body .aboutus__frame__text--sub {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #fcfcff;
+}
+
+.footer-div {
+  background-color: #c4cad8;
+  padding: 25px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.checkoutmodal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+
+.checkoutmodal form {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+  max-width: 500px;
+  padding: 1em;
+  grid-gap: 6px;
+}
+
+.checkoutmodal form input {
+  background: #fff;
+  border: 1px solid #9c9c9c;
+  z-index: 2;
+}
+
+.checkoutmodal form button {
+  background: lightgrey;
+  padding: 0.7em;
+  width: 100%;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  margin-top: 16px;
+}
+
+.checkoutmodal form button:hover {
+  background: #3f3b54;
+  cursor: pointer;
+}
+
+.checkoutmodal label {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  max-width: 160px;
+}
+
+.checkoutmodal input {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 0.25em;
+  height: 100%;
+  max-height: 100px;
+  margin: 0;
+}
+
+.checkoutmodal input:focus {
+  outline: none;
+}
+
+@media (min-width: 650px) {
+  .checkoutmodal form {
+    -ms-grid-columns: 140px 1fr;
+        grid-template-columns: 140px 1fr;
+    grid-gap: 16px;
+  }
+  .checkoutmodal label {
+    text-align: left;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .checkoutmodal input,
+  .checkoutmodal button {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+  }
+}
+
+.checkoutmodal .paymethod {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkoutmodal .paymethod input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkoutmodal .checkmark {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  height: 20px;
+  width: 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.checkoutmodal .paymethod:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkoutmodal .paymethod input:checked ~ .checkmark {
+  background-color: #6c7c9e;
+}
+
+.checkoutmodal .paymethod:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkoutmodal .paymethod input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkoutmodal .paymethod .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modalcontent {
+  background-color: #f2f2f2;
+  margin: 5% auto;
+  padding: 25px;
+  max-width: 350px;
+  border-radius: 3px;
+  -webkit-animation-name: modalcartopen__anim;
+          animation-name: modalcartopen__anim;
+  -webkit-animation-duration: 0.25s;
+          animation-duration: 0.25s;
+}
+
+.cartmodal__text {
+  font-family: "Poppins", sans-serif;
+  margin: 10px 0;
+}
+
+.cartmodal--closebtn {
+  color: #aaa;
+  float: right;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.cartmodal--closebtn:hover, .cartmodal--closebtn:focus {
+  text-decoration: none;
+  cursor: pointer;
+  color: #0a0a0a;
+}
+
+.cartmodal__container__itemframe__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 10px;
+}
+
+.cartmodal__container__itemframe__item--img {
+  width: 80px;
+  height: 80px;
+}
+
+.cartmodal__container__itemframe__item__textframe {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 10px;
+}
+
+.cartmodal__container__itemframe__item__textframe--titletext {
+  font-family: "Poppins", sans-serif;
+  margin: 4px;
+  height: 25px;
+  font-size: 1.1em;
+}
+
+.cartmodal__container__itemframe__item__textframe--price {
+  font-family: "Poppins", sans-serif;
+  margin: 4px;
+  height: 25px;
+  font-size: 0.9em;
+}
+
+.cartmodal__container__itemframe--button {
+  border: none;
+  color: #fcfcff;
+  background-color: #3f3b54;
+  padding: 10px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  margin: 10px, auto;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  cursor: pointer;
+}
+
+@-webkit-keyframes modalcartopen__anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalcartopen__anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 650px) {
+  .modalcontent {
+    max-width: 550px;
+  }
+  body .catalogue {
+    padding-left: 10%;
+    padding-right: 10%;
+    max-width: 790px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .catalogue__container {
+    max-width: 100%;
+  }
+  body .catalogue__container__item {
+    margin-bottom: 20px;
+  }
+  body .top {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 32px auto;
+    max-width: 790px;
+  }
+  body .hero {
+    margin: 16px auto;
+    padding-left: 10%;
+    padding-right: 10%;
+    max-height: 700px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: 790px;
+  }
+  body .aboutus {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  body .aboutus__frame {
+    max-width: 790px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body .aboutus__frame--img {
+    width: 100%;
+    max-width: 400px;
+    max-height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body .aboutus__frame__text--heading {
+    font-size: 18px;
+  }
+  body .aboutus__frame__text--sub {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 501px) {
+  .body .catalogue__container {
+    max-width: 325px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+    row-gap: 15px;
+  }
+  .body .catalogue__container .catalogue__container__item {
+    margin-bottom: 0px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
